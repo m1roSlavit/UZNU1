@@ -5,19 +5,15 @@ E_val = float(input("input E value: "))
 
 static_value = (x_value**2)/(pi**2)
 
-equation_left_part = sin(x_value)
-equation_right_part = x_value*(1-static_value)*(1-static_value/4)
+res = x_value
 
-n_counter = 6
+n_counter = 2
 
 while True:
     temp_val = 1 - static_value/((n_counter - 1)**2)
     n_counter += 1
     if fabs(temp_val) < E_val:
         break
-    equation_right_part *= temp_val
+    res *= temp_val
 
-if equation_left_part == equation_right_part:
-    print("Рівність справедлива")
-else:
-    print("Рівність несправидлива")
+print(res)
