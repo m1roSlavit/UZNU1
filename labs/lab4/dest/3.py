@@ -15,6 +15,11 @@ def calculate_side_length(x1, y1, x2, y2):
 side1 = calculate_side_length(x1, y1, x2, y2)
 side2 = calculate_side_length(x2, y2, x3, y3)
 side3 = calculate_side_length(x3, y3, x1, y1)
-result = max(side1, side2, side3)
 
-print(result)
+maxSide = side1
+if (side2 > maxSide):
+    maxSide = side2
+elif (side3 > maxSide):
+    maxSide = side3
+
+print(maxSide)
