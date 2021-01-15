@@ -1,5 +1,12 @@
+X = None
+Y = None
+
 with open("text.txt") as data:
-    res = 0
     for row in data:
-        res += row.count("A")
-    print(res)
+        if not X:
+            X = row
+        else:
+            Y = row
+            break
+
+print(X,Y)
